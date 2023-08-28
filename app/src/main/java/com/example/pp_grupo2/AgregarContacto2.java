@@ -1,15 +1,20 @@
 package com.example.pp_grupo2;
 
-import static androidx.core.content.ContextCompat.startActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class AgregarContacto2 extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_agregar_contacto2);
+    }
 
     public void agregar_contacto(View view) {
         Intent intent = new Intent(this, AgregarContacto.class);
@@ -20,19 +25,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Contactos.class);
         startActivity(intent);
     }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         getMenuInflater().inflate(R.menu.menu_activity, menu);
-
-        return true;
+      return true;
     }
 
     @Override

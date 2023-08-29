@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".AgregarContacto">
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
@@ -228,9 +229,27 @@
         android:layout_width="129dp"
         android:layout_height="35dp"
         android:layout_marginTop="32dp"
+        android:onClick="continuar"
         android:text="Continuar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.148"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+    <Spinner
+        android:id="@+id/spinnerTel"
+        android:layout_width="136dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@+id/editTextPhone"
+        tools:layout_editor_absoluteY="393dp" />
+
+    <Spinner
+        android:id="@+id/spinnerMail"
+        android:layout_width="136dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTel" />
 </androidx.constraintlayout.widget.ConstraintLayout>
